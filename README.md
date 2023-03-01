@@ -3,6 +3,11 @@
 # AUTHENTICATION
 
 NOTE: INITIAL PHASE OF THE AUTHENTICATION PROCESS WILL BE AUTOMATED ON THE DEVELOPER PORTAL! 
+## Base URI
+
+```python
+https://developer.phindor.com/phindor-api/public/api
+```
 
 ## REGISTER ON DEVELOPER PORTAL
 
