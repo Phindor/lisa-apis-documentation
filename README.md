@@ -290,5 +290,70 @@ Expected Response
 }
 
 ```
+# SALES DATA ONRAMP
+Before our machine learning models can start making great predictions from your data. we will need to collect a copy of the transactional details each time they are made from your end. Usind the secure code obtained from the previous endpoint, send us your sales data here:
+
+```python
+[POST] {{base_uri}}/sandbox/open_api/v1/data/sales/onramp
+```
+
+## Authorisation
+```python
+Bearer 0cb8ef5fd57ae232afd1533f94d5c4a6968571408fcc0b8fe2bac271d6ad4569b9bd30dd389c9b2a88df7b18ca05b49c013f4e25a0575c10fc6f1da23c1ab5a5c179d45e12bcb6d98adbf5fc592f1fc7bbb1e6f9091b10e6aa925d819ca7f38419a3cf59495af48fcf116d99171d84ec09157107bdfaf5e7e014b1daec64f70b
+```
+
+## Expected Request
+
+We do not restrict the amount of data you give us but you can supply part or all of the following data points;
+
+NOTE: owner_id is a unique identifier for your system we internally have unique identifiers that helps us know what data belong to who, however this
+is not shared or may not necessarily make any sense to your system, we therefore advice for sharing of a masked unique id from your side.
+
+```python
+{
+    "app_id":1,
+    "transaction_reference":"REFSDA06282",
+    "payment_method":"mpesa",
+    "transaction_date":"2023-3-1",
+    "sales_amount":"35000",
+    "products_bought":"{'product':'macbook air',}",
+    "rating":"4.5",
+    "owner_id":"1",
+    "owner_type":"supplier",
+    "sales_category":"retail"         
+}
+
+```
+
+## Expected Response
+
+```python
+{
+    "success": true,
+    "Lisa_response_code": 201,
+    "API_description": "sales data onramp is successful"
+}
+
+```
+## Possible Errors
+a. use of an invalid application id. 
+
+```python
+{
+    "success": false,
+    "Lisa_response_code": 401,
+    "error_description": "Invalid application id supplied"
+}
+
+```
+b. Failing to submit an application id. 
+
+```python
+{
+    "success": false,
+    "Lisa_response_code": 400,
+    "error_description": "No application id supplied"
+}
+```
 
 
