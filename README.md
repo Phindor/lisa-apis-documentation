@@ -356,4 +356,69 @@ b. Failing to submit an application id.
 }
 ```
 
+# SALES PREDICTION
+
+This endpoint will predict sales in the coming weeks.
+
+```python
+[GET]{{base_uri}}/sandbox/open_api/v1/predict/sales/{{app_id}}
+
+```
+
+## Authorisation 
+```python
+Bearer bc18bbce0a429f684f586c3225220f07f0f175de09547d2d597e24caefb48eee35db27a79241b413e6661e3f0e0ba4ce5ea5503dcdc774478d3f146e422e74504207461bcb76258dc1ff205820a3be6673657c62727e3b43390c84ac588e34adbde3e394855db026b988ddd66345d779794d225b88fb3f62319f4406c1187190
+```
+## Expected Response
+
+```python
+{
+    "success": true,
+    "application_id": "1",
+    "lisa_apis_description": "sales prediction processed successfully",
+    "data": [
+        {
+            "week 1": "29th December 2022 - 4th January 2023",
+            "sales_prediction": "2000000",
+            "Expected_daily_average": "400000"
+        },
+        {
+            "week 2": "5th December 2022 - 11th January 2023",
+            "sales_prediction": "2000000",
+            "Expected_daily_average": "400000"
+        },
+        {
+            "week 3": "12th December 2022 - 18th January 2023",
+            "sales_prediction": "800000",
+            "Expected_daily_average": "200000"
+        }
+    ]
+}
+
+```
+
+## Possible Error
+
+a. Sharing of application keys
+
+Sharing of Application keys can cause application block. in an event where Lisa detects an api call with a key belonging to a different application, Lisa will respond with the following:
+
+```python
+{
+    "success": false,
+    "Lisa_response_code": 401,
+    "error_description": "Sharing application keys with other lisa owners can result in an account block"
+}
+
+```
+b. Using invalid application keys
+
+```python
+{
+    "success": false,
+    "Lisa_response_code": 401,
+    "error_description": "Invalid or expired authorization key"
+}
+```
+
 
