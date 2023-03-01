@@ -258,7 +258,25 @@ Expected Response
 }
 
 ```
+# ENDPOINTS AUTH
+After setting up the developer accounts and having the necessary security credentials as well as application subscription for the needed API products, its time to autheticate all your endpoints, this endpoint will provide the access token that should be sent along with any request made. We are using a BASE64 encoded value of the concatenation of the consumer key and the consumer secret in that order as the secure access token to LISA APIs. this token has a time limit on production.
 
+[GET]{{base_uri}}/sandbox/open_api/v1/generate/lisa_client_credentials
 
+Expected Auth token
+```python
+Bearer BASE64ENCODEDTOKEN
+```
+Expected Response
+
+```python
+{
+    "success": true,
+    "Lisa_response_code": 200,
+    "secure_access_token": "0cb8ef5fd57ae232afd1533f94d5c4a6968571408fcc0b8fe2bac271d6ad4569b9bd30dd389c9b2a88df7b18ca05b49c013f4e25a0575c10fc6f1da23c1ab5a5c179d45e12bcb6d98adbf5fc592f1fc7bbb1e6f9091b10e6aa925d819ca7f38419a3cf59495af48fcf116d99171d84ec09157107bdfaf5e7e014b1daec64f70b",
+    "expires_in": 3599
+}
+
+```
 
 
