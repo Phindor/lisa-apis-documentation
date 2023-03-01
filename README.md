@@ -233,7 +233,7 @@ Expected Response
             "developer_id": 1,
             "app_name": "Tuskys",
             "consumer_key": "ca081d3cc21bed864a28693300cb1dd6",
-            "consumer_secret": "2ee84881668ed07601eddcd190974d73b43176fb78df19bdb0fb45c774d1c3cf034ef5376a1e28d28a79c9814e66f86713c137447dafe7acfe53a20c7acb30c8",
+            "consumer_secret":                      "2ee84881668ed07601eddcd190974d73b43176fb78df19bdb0fb45c774d1c3cf034ef5376a1e28d28a79c9814e66f86713c137447dafe7acfe53a20c7acb30c8",
             "expiry_seconds": "3599",
             "domain": "Sandbox",
             "created_at": "2023-02-28T22:17:53.000000Z",
@@ -308,6 +308,16 @@ We do not restrict the amount of data you give us but you can supply part or all
 
 NOTE: owner_id is a unique identifier for your system we internally have unique identifiers that helps us know what data belong to who, however this
 is not shared or may not necessarily make any sense to your system, we therefore advice for sharing of a masked unique id from your side.
+## Required Datapoints
+```python
+{
+    "app_id":1,
+    "transaction_date":"2023-3-1",
+    "sales_amount":"35000"        
+}
+```
+
+### other possible datapoints
 
 ```python
 {
@@ -419,6 +429,7 @@ b. Using invalid application keys
     "Lisa_response_code": 401,
     "error_description": "Invalid or expired authorization key"
 }
+
 ```
 
 
