@@ -112,7 +112,8 @@ This may result as a result of either sending an incorrect OTP or a incorrect de
     "token": "1|TWe25bziWGV9nxBKVeUUL5J7IWFuR5GCF7hWbYIS",
     "jsonData": {
         "developer_email": "johndoe@gmail.com",
-        "developer_name": "John Doe"
+        "developer_name": "John Doe",
+        "developer_id":1
     }
 }
 ```
@@ -123,6 +124,80 @@ This may result as a result of either sending an incorrect OTP or a incorrect de
     "success": false,
     "message": "Please ensure you have entered correct email and password"
 }
+```
+
+## APP CREATION
+Lisa uses an idea of "APP(S)" to wrap around all LISA products that are subscribed at any point in time. These applications represents third party system integration and therefore will include all the security credentials of any connected client. NO integration can therefore be done with no APP created. A developer can have more than 1 app and billing is done per APP.
+You can get started by creating an APP:
+
+```python
+{{base_uri}}/sandbox/open_api/v1/create_apps
+```
+Expected Request
+
+```python
+{
+    "developer_id":1,
+    "app_name":"TuskysTestAccount",
+    "domain":"Sandbox"
+}
+
+```
+
+Expected Response
+
+```python
+{
+    "success": true,
+    "APIresponse": {
+        "developer_id": 1,
+        "app_name": "joy",
+        "domain": "Sandbox",
+        "consumer_key": "ca081d3cc21bed864a28693300cb1dd6",
+        "consumer_secret": "2ee84881668ed07601eddcd190974d73b43176fb78df19bdb0fb45c774d1c3cf034ef5376a1e28d28a79c9814e66f86713c137447dafe7acfe53a20c7acb30c8",
+        "updated_at": "2023-02-28T22:17:53.000000Z",
+        "created_at": "2023-02-28T22:17:53.000000Z",
+        "id": 1
+    },
+    "api_subscription_state": {
+        "app_id": 1,
+        "sales_prediction_api": 0,
+        "customer_segmentation_api": 0,
+        "profiling_api": 0,
+        "personalization_api": 0
+    }
+}
+```
+
+Possible Errors
+(a). Missing request params
+```python
+{
+    "success": false,
+    "Lisa_response_code": 400,
+    "error_description": "request body validation error",
+    "APIerror": {
+        "developer_id": [
+            "The developer id field is required."
+        ],
+        "app_name": [
+            "The app name field is required."
+        ],
+        "domain": [
+            "The domain field is required."
+        ]
+    }
+}
+
+```
+(a). Invalid developer account 
+```python
+{
+    "success": false,
+    "Lisa_response_code": 404,
+    "error_description": "LISA is not able to verify your developer account"
+}
+
 ```
 
 
