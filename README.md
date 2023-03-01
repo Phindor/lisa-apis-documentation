@@ -199,7 +199,65 @@ Possible Errors
 }
 
 ```
+## GET APPS
+```python
+[GET]{{base_uri}}/sandbox/open_api/v1/apps/{developer_id}
 
+```
+Authorisation
+```python
+Bearer 1|TWe25bziWGV9nxBKVeUUL5J7IWFuR5GCF7hWbYIS
+```
+Expected Request
+
+```python
+NONE
+```
+Expected Response
+
+```python
+{
+    "success": true,
+    "APIresponse": [
+        {
+            "id": 1,
+            "developer_id": 1,
+            "app_name": "Tuskys",
+            "consumer_key": "ca081d3cc21bed864a28693300cb1dd6",
+            "consumer_secret": "2ee84881668ed07601eddcd190974d73b43176fb78df19bdb0fb45c774d1c3cf034ef5376a1e28d28a79c9814e66f86713c137447dafe7acfe53a20c7acb30c8",
+            "expiry_seconds": "3599",
+            "domain": "Sandbox",
+            "created_at": "2023-02-28T22:17:53.000000Z",
+            "updated_at": "2023-02-28T23:09:25.000000Z"
+        }
+    ]
+}
+
+```
+
+# API PRODUCT SUBSCRIPTION
+```python
+[POST]{{base_uri}}/sandbox/open_api/v1/subscribe/{{app_id}}
+```
+
+Expected Request
+
+NOTE: Current Available API is ONLY the Sales Prediction. but options are for the other API Products provided. For now test with the sales prediction api.
+
+```python
+{
+    "sales_prediction_api": 1
+}
+
+```
+Expected Response
+```python
+{
+    "success": true,
+    "api_response": "product subscription successful"
+}
+
+```
 
 
 
