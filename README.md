@@ -26,10 +26,27 @@ In order for integrators to fetch next purchase predictions for their specified 
 
 
 ```
+
+# INTEGRATOR DATA ONRAMP
+
+The process of Onramping business data is automated via use of API endpoint from customer business data infrastructure. The integrator will specify the following:
+    a. Customer's Data via the Customers data OnRamp endpoint
+The integrator will specify customer data by providing LISA APIs with the web hook that responds with the customer data. Lisa will read its content and ask the integrator to match the data to the LISA APIs specific data points. e.g match a customer name collumn to the customer name data point on Lisa. This ensures that Lisa uses the data provided very accurately and outputs precise insights.
+
 # AUTOMATING MARKETING
 
 After the previous stages, LISA will now have a solid profile and a detailed purchase prediction for your customer, its now time to automate the marketing. Lisa autogenerates marketing messages
-(under the hood using natural language processing models) that are customized for your business, LISA will list all this targeted messages
+(under the hood using natural language processing models) that are customized for your business, LISA will list all these targeted messages and the business owner is only supposed to approve or schedule sending for later. The business owner will also set the prefered sending medium for the marketing message (either via mail, text message or whatsapp) and get realtime delivery statuses. 
+. 
+
+
+
+
+
+
+
+
+
 
 
 # LISA DEVELOPER PORTAL FLOW
