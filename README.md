@@ -33,6 +33,38 @@ The process of Onramping business data is automated via use of API endpoint from
 ### (case scenario) 
 The integrator will specify customer data by providing LISA APIs with the web hook that responds with the customer data. Lisa will read its content and ask the integrator to match the data to the LISA APIs specific data         points. e.g match a customer name collumn to the customer name data point on Lisa. This ensures that Lisa uses the data provided very accurately and outputs precise insights.
 
+## Sample Request Webhook
+
+```python
+
+{
+    "Sales_date":"2022-11-2 19:00:34",
+    "Sales_amount":12111,
+    "Products_bought":
+[
+    {
+        "product_name":"HP monitor UHD 144Hz"
+        "product_id":"TH2618HA",
+        "cost_price":"23422",
+        "quantity":121,
+    },
+{
+        "product_name":"Logitech Keyboard ywh2"
+        "product_id":"2NSK82S",
+        "cost_price":"12332",
+        "quantity":234,
+    },
+{
+        "product_name":"Lenovo SSD 500gb"
+        "product_id":"D2DWKDNW2",
+        "cost_price":"5000",
+        "quantity":4321,
+    }
+],
+}
+
+```
+
 # AUTOMATING MARKETING
 
 After the previous stages, LISA will now have a solid profile and a detailed purchase prediction for your customer, its now time to automate the marketing. Lisa autogenerates marketing messages
