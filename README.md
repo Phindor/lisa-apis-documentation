@@ -35,6 +35,8 @@ The integrator will specify customer data by providing LISA APIs with the web ho
 
 ## Sample Sales Data Onramp Request Webhook
 
+Integrator will only fill in the data available. The only required data points are: app_id, sales, amount, and customer id.
+
 ```python
 
 {
@@ -74,6 +76,29 @@ The integrator will specify customer data by providing LISA APIs with the web ho
     "platform_ordered_from":"desktop",
     "order_processed_by":"232",
     "delivery_mode":"shipment"
+}
+
+```
+
+## Sample Customer Data Onramp Request Webhook
+
+Integrator will only fill in the data available. The only required data points are: app_id, sales, amount, and customer id.
+
+```python
+
+{
+    "customer_name":"John Doe Kamau",
+    "customer_phone":"0712345678",
+
+    "email":"johndoe@gmail.com",
+    "Owner_id":"113",
+    "gender":"M",
+    "preffered_payment_method":"MPESA",
+
+    "location":"Kilimani",
+    "age":"25",
+    "customer_category":"youth-electronics",
+  
 }
 
 ```
