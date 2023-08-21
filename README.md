@@ -33,7 +33,7 @@ The process of Onramping business data is automated via use of API endpoint from
 ### (case scenario) 
 The integrator will specify customer data by providing LISA APIs with the web hook that responds with the customer data. Lisa will read its content and ask the integrator to match the data to the LISA APIs specific data         points. e.g match a customer name collumn to the customer name data point on Lisa. This ensures that Lisa uses the data provided very accurately and outputs precise insights.
 
-## Sample Request Webhook
+## Sample Sales Data Onramp Request Webhook
 
 ```python
 
@@ -61,6 +61,19 @@ The integrator will specify customer data by providing LISA APIs with the web ho
                 "quantity":4321,
             }
         ],
+    "Rating":"4.5",
+    "Owner_id":"113",
+    "Transaction_ref":"RH572U1HSQ2",
+    "app_id":"12",
+    "customer_type":"retailer",
+    "sales_category":"retail-sale",
+    "location":"Kilimani",
+    "discount":"232",
+    "coupon_amount":null,
+    "is_Cancelled":false,
+    "platform_ordered_from":"desktop",
+    "order_processed_by":"232",
+    "delivery_mode":"shipment"
 }
 
 ```
