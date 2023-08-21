@@ -82,19 +82,17 @@ Integrator will only fill in the data available. The only required data points a
 
 ## Sample Customer Data Onramp Request Webhook
 
-Integrator will only fill in the data available. The only required data points are: app_id, sales, amount, and customer id.
+Integrator will only fill in the data available. The only required data points are: app_id, customer name, owner_id, and email.
 
 ```python
 
 {
     "customer_name":"John Doe Kamau",
     "customer_phone":"0712345678",
-
     "email":"johndoe@gmail.com",
     "Owner_id":"113",
     "gender":"M",
     "preffered_payment_method":"MPESA",
-
     "location":"Kilimani",
     "age":"25",
     "customer_category":"youth-electronics",
@@ -102,6 +100,8 @@ Integrator will only fill in the data available. The only required data points a
 }
 
 ```
+
+NOTE: these requests will typically be sent to LISA APIs each time a data record is created from the integrator side, e.g. each time a customer registers with your business, a copy of the customer data is sent via the corresponding hook. 
 
 # AUTOMATING MARKETING
 
