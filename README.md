@@ -26,7 +26,10 @@ In order for integrators to fetch next purchase predictions for their specified 
 
 
 ```
+# AUTOMATING MARKETING
 
+After the previous stages, LISA will now have a solid profile and a detailed purchase prediction for your customer, its now time to automate the marketing. Lisa autogenerates marketing messages
+(under the hood using natural language processing models) that are customized for your business, LISA will list all this targeted messages
 
 
 # LISA DEVELOPER PORTAL FLOW
