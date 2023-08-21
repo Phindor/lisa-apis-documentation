@@ -20,7 +20,6 @@ purchasing the listed products. LISA will tie each individual customer of your b
 In order for integrators to fetch next purchase predictions for their specified customers, they will send LISA the target customer details, NOTE: This should also match a customer that lisa has internaly and should therefore be submitted as a customer tied to the business. An example is as shown below:
 
 ```python
-
 {
     "customer_id":12,
 }
