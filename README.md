@@ -11,12 +11,26 @@ Lisa APIs uses customer profiles to map customer characteristics to their predic
    integrators and tie security credentials to a specific business entity), sale category (specifies the type of the sale transaction e.g, a retail or a service sale transaction), location of sale,
    discount given if any, coupon given if any, sale cancellation or refund status, employee who processed the transaction.
 
-## NEXT PURCHASE PREDICTING
+## NEXT PURCHASE PREDICTING.
 
-Based on the listed datapoint and very 
+Based on the listed datapoint and the next purchase model, LISA APIs is able to generate an informed and targeted customer carts, by predicting the demand and the likelihood of a customer
+purchasing the listed products. LISA will tie each individual customer of your business to a targeted cart purchase prediction based on the analysis of his/her previous purchase history.
+
+# INTEGRATORS PROCEDURE TO EXTRACT NEXT PURCHASE PREDICTIONS
+In order for integrators to fetch next purchase predictions for their specified customers, they will send LISA the target customer details, NOTE: This should also match a customer that lisa has internaly and should therefore be submitted as a customer tied to the business. An example is as shown below:
+
+```python
+
+{
+    "customer_id":12,
+}
 
 
-# LISA DEVLOPER PORTAL FLOW
+```
+
+
+
+# LISA DEVELOPER PORTAL FLOW
 # AUTHENTICATION
 
 NOTE: INITIAL PHASE OF THE AUTHENTICATION PROCESS WILL BE AUTOMATED ON THE DEVELOPER PORTAL! 
