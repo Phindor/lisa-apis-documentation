@@ -30,6 +30,7 @@ In order for integrators to fetch next purchase predictions for their specified 
 # INTEGRATOR DATA ONRAMP
 
 The process of Onramping business data is automated via use of API endpoint from customer business data infrastructure. The integrator will specify the following:
+
     1. Customer's Data via the Customers data OnRamp endpoint.
         The integrator will specify customer data by providing LISA APIs with the web hook that responds with the customer data. Lisa will read its content and ask the integrator to match the data to the LISA APIs specific data         points. e.g match a customer name collumn to the customer name data point on Lisa. This ensures that Lisa uses the data provided very accurately and outputs precise insights.
 
