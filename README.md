@@ -1,7 +1,19 @@
 # LISA API DOCUMENTATION
 # AUTOMATED MARKETING
 ## CUSTOMER PROFILING
+Lisa APIs uses customer profiles to map customer characteristics to their predicted actions, this is possible through analyzing the patterns from the following data points.
 
+1. Customer details including Customer name, unique customer id, product bought, time of purchase, prefered method of payment, the location of the customer as well as the at the time of purchase,
+    age and customer category (grouping).
+2. Sales details:- Payment method for each transaction, date, amount, Products tied to the sale transaction (this is in our case a collection of products that share the same sale id, e.g product
+   name, price and quantity respectively), the rating/review provided by the customer if any that pertains to that specific sale transaction, the owner id (references a specific customer that completed
+   the purchase), the transaction reference number (references the sales), application id (this is a unique identify that LISA APIs uses to identify each business entity, also used to bill LISA APIs
+   integrators and tie security credentials to a specific business entity), sale category (specifies the type of the sale transaction e.g, a retail or a service sale transaction), location of sale,
+   discount given if any, coupon given if any, sale cancellation or refund status, employee who processed the transaction.
+
+## NEXT PURCHASE PREDICTING
+
+Based on the listed datapoint and very 
 
 
 # LISA DEVLOPER PORTAL FLOW
